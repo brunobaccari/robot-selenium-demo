@@ -1,0 +1,11 @@
+python-dotenv
+selenium
+datetime
+robotframework
+robotframework-jsonlibrary
+robotframework-faker
+robotframework-requests
+robotframework-seleniumtestability
+robotframework-seleniumlibrary
+robotframework-tidy
+rpaframework-pdf
