@@ -1,11 +1,3 @@
-python-dotenv
-selenium
-datetime
-robotframework
-robotframework-jsonlibrary
-robotframework-faker
-robotframework-requests
-robotframework-seleniumtestability
-robotframework-seleniumlibrary
-robotframework-tidy
-rpaframework-pdf
+robotframework==7.5
+robotframework-seleniumlibrary==6.9.0
+selenium==4.50.0
