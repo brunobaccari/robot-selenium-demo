@@ -29,4 +29,8 @@ robot -d Results src/Clients/Login.robot
 
 Os cenários usam a conta pública de demonstração do SauceDemo. Revise os dados e opções do navegador nos arquivos de teste e em `src/resources/webdriver.robot`.
 
-Os relatórios `report.html`, `log.html` e `output.xml` ficam em `Results`. O repositório inclui um `chromedriver.exe` antigo; confira sua compatibilidade com o Chrome antes de usá-lo. As dependências Python não estão fixadas em versões. A revisão dos READMEs não reexecutou os cenários nem confirma compatibilidade com ambientes atuais.
+O checkout verifica jaqueta, quantidade, subtotal de $49.99, imposto de $4.00, total de $53.99, confirmação e carrinho vazio. As esperas seguem elementos e navegação; não há pausas fixas ou retries. A cobertura é da interface do site de demonstração, sem pagamento real.
+
+As dependências diretas estão fixadas. Selenium Manager resolve o driver; o executável histórico não é usado explicitamente. `HEADLESS=False` abre o navegador. As preferências do gerenciador de senhas se aplicam apenas ao perfil temporário de teste.
+
+O Actions executa os dois cenários e publica summary, JUnit, HTML e screenshots em artifacts. Para o mesmo formato local, use `robot -d results --xunit junit.xml src/Clients/Login.robot`. Outputs são ignorados pelo Git.
