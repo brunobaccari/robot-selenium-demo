@@ -30,3 +30,4 @@ htmlcov/
 /photos/
 /selenium-screenshot-*.png
 node_modules/
+.husky/_/

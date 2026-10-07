@@ -1,9 +1,14 @@
 {
-    "name": "robot-selenium-demo",
-    "version": "1.0.0",
-    "description": "This repository hosts the SauceDemo demo project, utilizing Robot Framework and Selenium for comprehensive end-to-end testing of web applications. The framework aims to ensure the functionality, performance, and reliability of the SauceDemo website",
-    "scripts": {
-        "test": "robot -d ./Results src/Clients/Login.robot"
-    },
-    "author": "Bruno Baccari"
+  "name": "robot-selenium-demo",
+  "version": "1.0.0",
+  "description": "This repository hosts the SauceDemo demo project, utilizing Robot Framework and Selenium for comprehensive end-to-end testing of web applications. The framework aims to ensure the functionality, performance, and reliability of the SauceDemo website",
+  "scripts": {
+    "test": "robot -d ./Results src/Clients/Login.robot",
+    "prepare": "husky",
+    "check:local": "git diff --cached --check && python scripts/summary.py --self-test"
+  },
+  "author": "Bruno Baccari",
+  "devDependencies": {
+    "husky": "9.1.7"
+  }
 }
