@@ -34,3 +34,7 @@ Checkout checks the jacket, quantity, $49.99 subtotal, $4.00 tax, $53.99 total, 
 Direct dependencies are pinned. Selenium Manager resolves the driver; the historical executable is not explicitly used. `HEADLESS=False` opens the browser. Password-manager preferences apply only to the temporary test profile.
 
 Actions runs both scenarios and uploads a summary, JUnit, HTML and screenshots as artifacts. For the same local format, use `robot -d results --xunit junit.xml src/Clients/Login.robot`. Generated files are Git-ignored.
+
+The Actions summary lists every scenario, duration, totals and blocking reason. The gate requires the count configured in the workflow, with no failures or skips; missing or invalid JUnit fails the gate. The summary is also included in the artifact.
+
+Final-state screenshots are also captured for passing UI tests and stored in artifacts, outside Git.

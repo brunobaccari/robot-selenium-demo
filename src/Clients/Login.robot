@@ -2,7 +2,7 @@
 Library             SeleniumLibrary
 Resource            ../TestCases/Login.robot
 
-Test Teardown       Close Browser
+Test Teardown    Capture Final State And Close
 
 
 *** Test Cases ***
@@ -15,3 +15,11 @@ CT: Run Login and Checkout Test
     [Documentation]    Executa o teste de login e checkout.
     [Tags]    @checkout
     Run Keyword    Login And Checkout
+
+*** Keywords ***
+Capture Final State And Close
+    TRY
+        Capture Page Screenshot
+    FINALLY
+        Close All Browsers
+    END
